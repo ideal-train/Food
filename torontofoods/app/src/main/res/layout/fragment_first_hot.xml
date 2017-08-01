@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.shenni.torontofoods.fragment.FirstHotFragment">
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/trl_refresh_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/userScroreRe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/head_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/p240" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/p84"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/p25">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/icon_love_live" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/p300"
+                    android:layout_marginBottom="@dimen/p10"
+                    android:layout_marginTop="@dimen/p10"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/font_black18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bus_recommend" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy_hot_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+</LinearLayout>

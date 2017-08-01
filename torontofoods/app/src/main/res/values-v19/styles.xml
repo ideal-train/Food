@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ********************************** Android 4.4 主题 ********************************** -->
+
+    <!--状态栏透明-->
+    <style name="AcTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--APP全局背景色-->
+        <item name="android:windowBackground">@color/app_bg</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <!--状态栏-->
+        <!--<item name="android:fitsSystemWindows">true</item>-->
+    </style>
+
+    <!--启动前背景图全屏-->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/app_start_bg</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>

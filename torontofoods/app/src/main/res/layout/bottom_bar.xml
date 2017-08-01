@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myradio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_white">
+
+    <RadioGroup
+        android:id="@+id/rg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/p110"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.shenni.torontofoods.widget.MyRadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/home_page1"
+            android:textColor="@drawable/radio_txt_selector"
+            android:textSize="12sp"
+            myradio:drawableSize="28dp"
+            myradio:drawableTop="@drawable/radio_home" />
+
+        <com.shenni.torontofoods.widget.MyRadioButton
+            android:id="@+id/rb_follow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/home_page2"
+            android:textColor="@drawable/radio_txt_selector"
+            android:textSize="12sp"
+            myradio:drawableSize="30dp"
+            myradio:drawableTop="@drawable/radio_follow" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/bottom_conter"
+            android:padding="@dimen/p10"
+            android:src="@drawable/recording" />
+
+        <com.shenni.torontofoods.widget.MyRadioButton
+            android:id="@+id/rb_collection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/home_page3"
+            android:textColor="@drawable/radio_txt_selector"
+            android:textSize="12sp"
+            myradio:drawableSize="30dp"
+            myradio:drawableTop="@drawable/radio_collection" />
+
+        <com.shenni.torontofoods.widget.MyRadioButton
+            android:id="@+id/rb_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/home_page4"
+            android:textColor="@drawable/radio_txt_selector"
+            android:textSize="12sp"
+            myradio:drawableSize="28dp"
+            myradio:drawableTop="@drawable/radio_user" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

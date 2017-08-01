@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shenni.torontofoods.fragment.HomeFirstFragment">
+
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/sli_tl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        tl:tl_indicator_color="@color/black"
+        tl:tl_indicator_width="10dp"
+        tl:tl_textSelectColor="@color/black"
+        android:layout_gravity="center"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textUnselectColor="@color/un_black"
+        tl:tl_underline_color="@color/black" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shenni.torontofoods.fragment.HomeFirstFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/tc_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/icon_add"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tools:text="多伦多" />
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tl_5"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            tl:tl_indicator_color="@color/black"
+            tl:tl_indicator_width="10dp"
+            tl:tl_textSelectColor="@color/black"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textUnselectColor="@color/un_black"
+            tl:tl_underline_color="@color/black" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

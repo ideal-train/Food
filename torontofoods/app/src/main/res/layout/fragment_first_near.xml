@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fra_first_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:gravity="center"
+    tools:context="com.shenni.torontofoods.fragment.HomeFirstFragment">
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/trl_refresh_list"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <!-- 第一部分:CoordinatorLayout -->
+        <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="true">
+
+            <!-- 第二部分:缩放控件-->
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/id_appbarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_tool_bar_test_ctl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandedTitleMarginEnd="64dp"
+                    app:expandedTitleMarginStart="48dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/userScroreRe"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="240dp"-->
+                    <!--app:layout_scrollFlags="enterAlwaysCollapsed">-->
+
+
+                    <!--</RelativeLayout>-->
+                    <LinearLayout
+                        android:id="@+id/userScroreRe"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_scrollFlags="enterAlwaysCollapsed">
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/head_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/p240" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/p84"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/p25">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/icon_love_live" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/p300"
+                            android:layout_marginBottom="@dimen/p10"
+                            android:layout_marginTop="@dimen/p10"
+                            android:background="@color/white"
+                            android:gravity="center">
+
+                            <TextView
+                                style="@style/font_black18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bus_recommend" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--<RadioGroup-->
+                    <!--android:id="@+id/radioGroup"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dip"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal" />-->
+                    <FrameLayout
+                        android:id="@+id/top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.warmtel.expandtab.ExpandPopTabView
+                            android:id="@+id/expandtab_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+                </LinearLayout>
+            </android.support.design.widget.AppBarLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <!-- 第三部分:Your Scroll View-->
+            <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:id="@+id/myMainScrollView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:overScrollMode="always"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+            <!--&lt;!&ndash;- app:layout_behavior="@string/appbar_scrolling_view_behavior"&ndash;&gt;-->
+
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/mainLinearLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="测试gem测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测试测试测试" />-->
+
+            <!--&lt;!&ndash;<FrameLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/myFrameContainer"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="fill_parent"></FrameLayout>&ndash;&gt;-->
+
+            <!--</LinearLayout>-->
+            <!--</android.support.v4.widget.NestedScrollView>-->
+        </android.support.design.widget.CoordinatorLayout>
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+</LinearLayout>

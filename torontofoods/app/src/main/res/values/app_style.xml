@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--间白色字体-->
+
+    <style name="font_b_white12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/font_white2</item>
+    </style>
+
+    <style name="font_b_white14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/font_white2</item>
+    </style>
+
+    <style name="font_b_white16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/font_white2</item>
+    </style>
+
+    <style name="font_b_white18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/font_white2</item>
+    </style>
+
+    <!--纯白色字体-->
+
+    <style name="font_white12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="font_white14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="font_white16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="font_white18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!--纯黑色字体-->
+    <style name="font_black12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="font_black14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="font_black16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="font_black18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--纯黑色字体-->
+    <style name="font_b_black12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/content_black</item>
+    </style>
+
+    <style name="font_b_black14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/content_black</item>
+    </style>
+
+    <style name="font_b_black16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/content_black</item>
+    </style>
+
+    <style name="font_b_black18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/content_black</item>
+    </style>
+
+</resources>

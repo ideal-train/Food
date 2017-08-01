@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">多伦多风情</string>
+    <string name="home_page1">首页</string>
+    <string name="home_page2">关注</string>
+    <string name="home_page3">收藏</string>
+    <string name="home_page4">我的</string>
+
+    <string name="loading">建设中</string>
+    <string name="first_home_page1">热门</string>
+    <string name="first_home_page2">附近商家</string>
+    <string name="first_home_page3">发现</string>
+    <string name="follow_home_page1">商家</string>
+    <string name="follow_home_page2">用户</string>
+    <string name="mine_card">编辑个性签名</string>
+    <string name="search_Keyword">关键词搜索</string>
+    <string name="bus_recommend">商家推荐</string>
+    <string name="un_attention">+关注</string>
+    <string name="attention">已关注</string>
+    <string name="item_money">$%s CAD/人</string>
+    <string name="item_distance">%skm</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

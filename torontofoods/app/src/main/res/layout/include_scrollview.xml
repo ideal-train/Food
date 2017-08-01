@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/p160">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ll1_re1_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/font_b_white14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll1_re1_fans"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/p10"
+                    android:drawableLeft="@drawable/icon_fans"
+                    android:drawablePadding="@dimen/p10"
+                    android:text="粉丝" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ll1_re1_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/font_b_white14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll1_re1_focus"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/p10"
+                    android:drawableLeft="@drawable/icon_fans"
+                    android:drawablePadding="@dimen/p10"
+                    android:text="关注" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ll1_re1_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/font_b_white14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll1_re1_collect"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/p10"
+                    android:drawableLeft="@drawable/icon_fans"
+                    android:drawablePadding="@dimen/p10"
+                    android:text="粉丝" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/app_white"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/p160"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll2_ll1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/p50"
+                    android:layout_height="@dimen/p50"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/icon_datas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_black14"
+                    android:layout_marginTop="@dimen/p20"
+                    android:text="用户资料" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_ll2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_replay" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/font_black14"
+                    android:layout_marginTop="@dimen/p20"
+                    android:layout_height="wrap_content"
+                    android:text="我的评论" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_ll3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_video" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_black14"
+                    android:layout_marginTop="@dimen/p20"
+                    android:text="我的视频" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/p160"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_aboutus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/font_black14"
+                    android:layout_marginTop="@dimen/p20"
+                    android:layout_height="wrap_content"
+                    android:text="关于我们" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_share" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_black14"
+                    android:layout_marginTop="@dimen/p20"
+                    android:text="分享软件" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
