@@ -39,6 +39,8 @@ public class MineFragment extends LazyFragment {
     @Bind(R.id.pzv)
     PullZoomView pzv;
 
+    private  String a;
+    private  Integer b;
     @Override
     protected int setContentView() {
         return R.layout.fragment_mine;
