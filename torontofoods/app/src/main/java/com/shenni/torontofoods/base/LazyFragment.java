@@ -1,6 +1,7 @@
 package com.shenni.torontofoods.base;
 
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -83,7 +84,7 @@ public abstract class LazyFragment extends BaseFragment {
      *
      * @return 布局的layoutId
      */
-    protected abstract int setContentView();
+    protected abstract @LayoutRes int setContentView();
 
     /**
      * 初始化控件操作

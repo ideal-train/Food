@@ -1,5 +1,6 @@
 package com.shenni.torontofoods;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.shenni.torontofoods.activity.TestActivity;
 import com.shenni.torontofoods.base.BaseActivity;
 import com.shenni.torontofoods.fragment.CollectFragment;
 import com.shenni.torontofoods.fragment.HomeFirstFragment;
@@ -15,7 +17,6 @@ import com.shenni.torontofoods.fragment.MineFragment;
 import com.shenni.torontofoods.utils.StatusBarUtil;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
@@ -28,15 +29,19 @@ public class MainActivity extends BaseActivity {
 
     private long exitTime;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
-//        StatusBarUtil.setColor(MainActivity.this, getResources().getColor(R.color.app_bg), 0);
+    public int setContentViewID() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void setStatusBar() {
         StatusBarUtil.setTranslucentForImageView(MainActivity.this, 0, null);
-        ButterKnife.bind(this);
+    }
+
+    @Override
+    public void initView() {
         fakeStatusBar.setBackgroundColor(getResources().getColor(R.color.app_bg));
         switchFragment(new HomeFirstFragment(), null);
     }
@@ -59,6 +64,7 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.bottom_conter:
                 toast(R.string.loading);
+                startActivity(new Intent(MainActivity.this, TestActivity.class));
                 break;
         }
     }
@@ -73,7 +79,6 @@ public class MainActivity extends BaseActivity {
         } catch (Exception exceptione) {
         }
     }
-
 
 
     @Override

@@ -11,14 +11,14 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-    signingConfigs {
-        releaseKey {
-            keyAlias 'toron_key'
-            keyPassword RELEASE_KEYSTORE_PWD
-            storeFile file('../toron_key.jks')
-            storePassword RELEASE_KEYSTORE_PWD
-        }
-    }
+//    signingConfigs {
+//        releaseKey {
+//            keyAlias 'toron_key'
+//            keyPassword RELEASE_KEYSTORE_PWD
+//            storeFile file('../toron_key.jks')
+//            storePassword RELEASE_KEYSTORE_PWD
+//        }
+//    }
     defaultConfig {
         applicationId "com.shenni.torontofoods"
 //        minSdkVersion 17
@@ -50,14 +50,14 @@ android {
             debuggable false
             minifyEnabled false
             jniDebuggable false
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseKey
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.releaseKey
             pseudoLocalesEnabled true
         }
         debug {
             minifyEnabled false
-            signingConfig signingConfigs.releaseKey
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.releaseKey
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }

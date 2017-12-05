@@ -14,6 +14,7 @@
     <dimen name="dp80">80dp</dimen>
     <dimen name="dp100">100dp</dimen>
     <dimen name="dp6">6dp</dimen>
+    <dimen name="toolbar_padding_top">25dp</dimen>
 
 
     <!--像素大小,因为用了适配框架，所以这里的大小全为像素，会自动转换为dp,汉字大小转换为px-->

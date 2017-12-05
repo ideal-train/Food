@@ -3,6 +3,9 @@ package com.shenni.torontofoods.base;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBar;
 import android.view.Gravity;
 import android.view.View;
@@ -11,18 +14,19 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.util.Util;
 import com.shenni.torontofoods.R;
+import com.shenni.torontofoods.utils.StatusBarUtil;
 import com.shenni.torontofoods.utils.ToastUtil;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import butterknife.ButterKnife;
+
 
 /**
- * 1、集成ButterKnife View 注入框架
- * <p/>
- * 2、集成EventBus 事件总线框架
- * <p/>
  */
 public abstract class BaseActivity extends AutoLayoutActivity {
 
@@ -57,7 +61,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
 
 
     //状态栏颜色
-    TextView tvStatusBar;
+//    TextView tvStatusBar;
     //toobar 是否可隐藏
     RelativeLayout mToobarView;
     //左侧 点击区域
@@ -79,13 +83,23 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(setLayoutResID());
-//		unbinder=ButterKnife.bind(this);
-//        ButterKnife.inject(this);
+        setContentView(setContentViewID());
+        ButterKnife.bind(this);
         allActivity.add(this);
         mContext = this;
+        //初始化状态栏透明
+        setStatusBar();
 //        initActionbar();
         // Logger.init().hideThreadInfo().setLogLevel(LogLevel.FULL);
+        initView();
+    }
+
+
+    protected void setStatusBar() {
+//        有颜色全透状态栏
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.black), 0);
+//        浸入式状态栏
+//      StatusBarUtil.setTranslucentForImageView(this, 0, null);
     }
 
     private void initActionbar() {
@@ -195,7 +209,10 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//		unbinder.unbind();
+        ButterKnife.unbind(this);
+        if (Util.isOnMainThread() && !this.isFinishing()) {
+            Glide.with(this).pauseRequests();
+        }
     }
 
 
@@ -210,9 +227,9 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     }
 
 
-//    public abstract int setLayoutResID();
+    public abstract @LayoutRes int setContentViewID();
 
-//    public abstract void InitView();
+    public abstract void initView();
 
     public void toast(String msg) {
         ToastUtil.shortToast(getApplication(), msg);
@@ -227,7 +244,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
      * 初始化titlebar
      */
     private void initToolbar() {
-        tvStatusBar = (TextView) findViewById(R.id.tv_status_bar);
+//        tvStatusBar = (TextView) findViewById(R.id.tv_status_bar);
 
         mToobarView = (RelativeLayout) findViewById(R.id.toobar_view);
 
@@ -250,7 +267,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     }
 
     // 中间标题
-    public void justSetTitleBar(int title) {
+    public void justSetTitleBar(@StringRes int title) {
         initToolbar();
         leftimg.setVisibility(View.GONE);
         mToolTarTitle.setText(getString(title));
@@ -264,7 +281,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     }
 
     //左侧返回 中间标题
-    public void setTitleBar(int title) {
+    public void setTitleBar(@StringRes int title) {
         initToolbar();
         mToolTarTitle.setText(getString(title));
         mLeftClick();
@@ -278,7 +295,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     }
 
     //修改左侧图片 中间标题
-    public void setLeftImgTitleBar(int title, int lImg) {
+    public void setLeftImgTitleBar(@StringRes int title, @DrawableRes int lImg) {
         initToolbar();
         leftTv.setVisibility(View.GONE);
         leftimg.setVisibility(View.VISIBLE);
@@ -288,7 +305,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     }
 
     //修改左侧图片 中间标题
-    public void setLeftImgTitleBar(String title, int lImg) {
+    public void setLeftImgTitleBar(String title, @DrawableRes int lImg) {
         initToolbar();
         leftTv.setVisibility(View.GONE);
         leftimg.setVisibility(View.VISIBLE);
@@ -309,7 +326,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
 
 
     //左侧返回 中间标题 右侧图片
-    public void setRightTxtTitleBar(int title, int lImg) {
+    public void setRightTxtTitleBar(@StringRes int title, @DrawableRes int lImg) {
         initToolbar();
         leftTv.setVisibility(View.GONE);
         rightimg.setVisibility(View.VISIBLE);
@@ -350,7 +367,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     }
 
     //左侧无 中间标题 右侧图片
-    public void justSetRightTxtTitleBar(int title, int Img) {
+    public void justSetRightTxtTitleBar(@StringRes int title, @DrawableRes int Img) {
         initToolbar();
         leftimg.setVisibility(View.GONE);
         rightimg.setVisibility(View.VISIBLE);
@@ -360,7 +377,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     }
 
     //左侧无 中间标题 右侧文字
-    public void JustSetRightTxtTitleBar(String title, int Img) {
+    public void JustSetRightTxtTitleBar(String title, @DrawableRes int Img) {
         initToolbar();
         leftimg.setVisibility(View.GONE);
         rightimg.setVisibility(View.VISIBLE);

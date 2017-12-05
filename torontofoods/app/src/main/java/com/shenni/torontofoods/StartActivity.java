@@ -6,7 +6,6 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,9 +14,9 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
 import com.shenni.torontofoods.base.BaseActivity;
+import com.shenni.torontofoods.utils.StatusBarUtil;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class StartActivity extends BaseActivity {
     private static final int ANIMATION_TIME = 2000;
@@ -25,20 +24,26 @@ public class StartActivity extends BaseActivity {
     @Bind(R.id.iv_entry)
     ImageView ivEntry;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public int setContentViewID() {
         //全屏代码
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_start);
-        ButterKnife.bind(this);
+        return R.layout.activity_start;
+    }
+
+    @Override
+    public void initView() {
         //这里是第二种方法 消除启动前黑白屏
         setTranslucentStatus(true);
         isStartAnim(true);
-
     }
 
+    @Override
+    protected void setStatusBar() {
+        StatusBarUtil.setTranslucentForImageView(StartActivity.this, 0, null);
+    }
 
     private void isStartAnim(boolean start) {
         if (start) {

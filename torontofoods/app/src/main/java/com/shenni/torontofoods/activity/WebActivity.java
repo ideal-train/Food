@@ -1,7 +1,6 @@
 package com.shenni.torontofoods.activity;
 
 import android.graphics.Bitmap;
-import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -12,11 +11,9 @@ import android.webkit.WebViewClient;
 import com.shenni.torontofoods.R;
 import com.shenni.torontofoods.base.BaseActivity;
 import com.shenni.torontofoods.utils.DialogUtil;
-import com.shenni.torontofoods.utils.StatusBarUtil;
 import com.shenni.torontofoods.utils.StringUtil;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class WebActivity extends BaseActivity {
 
@@ -25,11 +22,12 @@ public class WebActivity extends BaseActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web);
-        ButterKnife.bind(this);
-        StatusBarUtil.setColor(WebActivity.this, getResources().getColor(R.color.colorPrimary), 0);
+    public int setContentViewID() {
+        return R.layout.activity_web;
+    }
+
+    @Override
+    public void initView() {
         leftDefault();
         init();
     }
