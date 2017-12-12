@@ -7,6 +7,7 @@
 
 ![show](showUI/show1.png)
 
+![show](showUI/show2.png)
 
 ### 栗子： 
     
@@ -48,10 +49,11 @@
 ## 更多用法 [点击这里](https://github.com/LJF-SH/Food/blob/master/torontofoods/app/src/main/java/com/shenni/torontofoods/utils/DialogUtil.java)
 
 
-![show](showUI/show2.png)
+
 ![show](showUI/show3.png)
 
 ![show](showUI/show4.png)
+
 ![show](showUI/show5.png)
 
 ![show](showUI/show6.png)
