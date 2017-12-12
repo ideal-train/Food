@@ -2,12 +2,13 @@
 作为一个空的项目框架使用
 
 
+## 我的笔记进阶篇: [点击这里](https://github.com/LJF-SH/MyNote)
 仿IOS Android DiaLog项目参考:https://github.com/weavey/NormalSelectDialog
 
 
-![show](showUI/show1.png)</br>
+![show](showUI/show1.png)
 
-![show](showUI/show2.png)</br>
+![show](showUI/show2.jpg)</br>
 
 ### 栗子： 
     
@@ -46,15 +47,15 @@
                 .show();
     }
     
-## 更多用法 [点击这里](https://github.com/LJF-SH/Food/blob/master/torontofoods/app/src/main/java/com/shenni/torontofoods/utils/DialogMaterialUtils.java)
+## 更多用法: [点击这里](https://github.com/LJF-SH/Food/blob/master/torontofoods/app/src/main/java/com/shenni/torontofoods/utils/DialogMaterialUtils.java)
 
 
 
-![show](showUI/show3.png)</br>
+![show](showUI/show3.jpg)</br>
 
-![show](showUI/show4.png)</br>
+![show](showUI/show4.png)
 
-![show](showUI/show5.png)
+![show](showUI/show5.jpg)</br>
 
 ![show](showUI/show6.png)
 
