@@ -48,12 +48,12 @@
     
 ## 更多用法: [点击这里](https://github.com/LJF-SH/Food/blob/master/torontofoods/app/src/main/java/com/shenni/torontofoods/utils/DialogMaterialUtils.java)
 
+# 更多效果:
 
-
-![show](showUI/show3.jpg)</br>
+![show](showUI/show3.jpg)
 ![show](showUI/show4.png)
 
-![show](showUI/show5.jpg)</br>
+![show](showUI/show5.jpg)
 ![show](showUI/show6.png)
 
 ---
