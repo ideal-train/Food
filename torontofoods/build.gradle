@@ -29,6 +29,7 @@ ext {
     versionCode = 1
     versionName = "0.0.1"
 //  第三方库统一设置
+    LibminSdkVersion = 15
     LibCompileSdkVersion = 25
     LibBuildToolsVersion = "25.0.1"
     LibTargetSdkVersion = 23

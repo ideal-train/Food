@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/FlycoTabLayout_Lib" />
             <option value="$PROJECT_DIR$/android-expandpoptab-library" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/selectordialog" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

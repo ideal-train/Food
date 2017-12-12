@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_corner10"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_close_dialog"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/icon_close"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/md_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="余额不足"
+                android:textColor="@color/font_orange"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/md_dialog_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="是否充值"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/img_tip"
+                android:layout_width="143dp"
+                android:layout_height="90dp"
+                android:background="@drawable/icon_month"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/img_tip_2"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/icon_experience"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="恭喜！今日获得积分"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/md_dialog_content2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/font_orange"
+                android:textSize="16sp"
+                android:visibility="gone"
+                tools:text="余额不足" />
+
+
+            <include layout="@layout/bootom_dialog_text2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

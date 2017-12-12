@@ -89,4 +89,5 @@ dependencies {
     compile project(':FlycoTabLayout_Lib')
     compile 'com.lzy.widget:view-core:0.2.2'
     compile project(':android-expandpoptab-library')
+    compile project(':selectordialog')
 }
