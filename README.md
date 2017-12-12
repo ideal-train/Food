@@ -7,7 +7,6 @@
 
 
 ![show](showUI/show1.png)
-
 ![show](showUI/show2.jpg)</br>
 
 ### 栗子： 
@@ -52,11 +51,9 @@
 
 
 ![show](showUI/show3.jpg)</br>
-
 ![show](showUI/show4.png)
 
 ![show](showUI/show5.jpg)</br>
-
 ![show](showUI/show6.png)
 
 ---
